@@ -1,0 +1,72 @@
+** LICENSE **
+
+WEB SOLUTIONS WORKSHOP
+SOFTWARE END USER LICENSE AGREEMENT
+FOR EASYTAXIOFFICE APPLICATION
+
+This copy of EasyTaxiOffice ("the Software Product") and accompanying documentation is licensed and not sold. This Software Product is protected by copyright laws and treaties, as well as laws and treaties related to other forms of intellectual property. Web Solutions Workshop own intellectual property rights in the Software Product. The Licensee's ("you" or "your") license to download, use, copy, or change the Software Product is subject to these rights and to all the terms and conditions of this End User License Agreement ("Agreement").
+
+
+** Acceptance **
+YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT BY INSTALLING, USING, OR COPYING THE SOFTWARE PRODUCT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, YOU MUST NOT INSTALL, USE, OR COPY THE SOFTWARE PRODUCT.
+
+
+** License Grant **
+This Agreement entitles you to install and use one copy of the Software Product. In addition, you may make one archival copy of the Software Product. The archival copy may only be used for the reinstallation of the Software Product. This Agreement does not permit the installation or use of multiple copies of the Software Product on more than one domain per licence. Multiple copy use or installation is only allowed if you obtain an appropriate licensing agreement for each copy of the Software Product. For further information regarding multiple copy licensing of the Software Product, please contact:
+
+Representative: Web Solutions Workshop
+Address: 115 Mare Street
+London E8 4RU, UK
+Phone Number: +44 (0) 20 3633 1535
+E-mail Address: contact@wsworkshop.co.uk
+
+
+** Restrictions on Transfer **
+Without first obtaining the express written consent of Web Solutions Workshop, you may not assign your rights and obligations under this Agreement, or redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer your rights to the Software Product.
+
+
+** Restrictions on Use **
+You may not use, copy, or install the Software Product on any system, or permit the use, copying, or installation of the Software Product by more than one domain agreed prior to purchase. If you hold multiple, validly licensed copies, you may not use, copy, or install the Software Product on any system with more than the number of domains agreed and permitted by license, or permit the use, copying, or installation with more domains than the number agreed and permitted by license.
+You may not decompile, "reverse-engineer", disassemble, or otherwise attempt to derive the source code for the Software Product.
+
+
+** Restrictions on Alteration **
+You may not modify the Software Product or create any derivative work of the Software Product or its accompanying documentation. Derivative works include but are not limited to translations. You may not alter any files or libraries in any portion of the Software Product.
+
+When allowed to modify source code you are only allowed to modify it within the same purpose this software was provided to you. You may not reshape it to become any form of marketplace or comparison site. It can only be used as a platform to take bookings and dispatch it to company drivers.
+
+
+** Restrictions on Copying **
+You may not copy any part of the Software Product except to the extent that licensed use inherently demands the creation of a temporary copy stored in computer memory and not permanently affixed on storage medium. You may make one archival copy which must be stored on a medium other than a computer hard drive.
+
+
+** Disclaimer of Warranties and Limitation of Liability **
+UNLESS OTHERWISE EXPLICITLY AGREED TO IN WRITING BY WEB SOLUTIONS WORKSHOP, WEB SOLUTIONS WORKSHOP MAKES NO OTHER WARRANTIES, EXPRESS OR IMPLIED, IN FACT OR IN LAW, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OTHER THAN AS SET FORTH IN THIS AGREEMENT OR IN THE LIMITED WARRANTY DOCUMENTS PROVIDED WITH THE SOFTWARE PRODUCT.
+
+Web Solutions Workshop makes no warranty that the Software Product will meet your requirements or operate under your specific conditions of use. Web Solutions Workshop makes no warranty that operation of the Software Product will be secure, error free, or free from interruption. YOU MUST DETERMINE WHETHER THE SOFTWARE PRODUCT SUFFICIENTLY MEETS YOUR REQUIREMENTS FOR SECURITY AND UNINTERRUPTABILITY. YOU BEAR SOLE RESPONSIBILITY AND ALL LIABILITY FOR ANY LOSS INCURRED DUE TO FAILURE OF THE SOFTWARE PRODUCT TO MEET YOUR REQUIREMENTS. WEB SOLUTIONS WORKSHOP WILL NOT, UNDER ANY CIRCUMSTANCES, BE RESPONSIBLE OR LIABLE FOR THE LOSS OF DATA ON ANY COMPUTER OR INFORMATION STORAGE DEVICE.
+
+UNDER NO CIRCUMSTANCES SHALL WEB SOLUTIONS WORKSHOP, ITS DIRECTORS, OFFICERS, EMPLOYEES OR AGENTS BE LIABLE TO YOU OR ANY OTHER PARTY FOR INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL, PUNITIVE, OR EXEMPLARY DAMAGES OF ANY KIND (INCLUDING LOST REVENUES OR PROFITS OR LOSS OF BUSINESS) RESULTING FROM THIS AGREEMENT, OR FROM THE FURNISHING, PERFORMANCE, INSTALLATION, OR USE OF THE SOFTWARE PRODUCT, WHETHER DUE TO A BREACH OF CONTRACT, BREACH OF WARRANTY, OR THE NEGLIGENCE OF WEB SOLUTIONS WORKSHOP OR ANY OTHER PARTY, EVEN IF WEB SOLUTIONS WORKSHOP IS ADVISED BEFOREHAND OF THE POSSIBILITY OF SUCH DAMAGES. TO THE EXTENT THAT THE APPLICABLE JURISDICTION LIMITS WEB SOLUTIONS WORKSHOP'S ABILITY TO DISCLAIM ANY IMPLIED WARRANTIES, THIS DISCLAIMER SHALL BE EFFECTIVE TO THE MAXIMUM EXTENT PERMITTED.
+
+
+** Governing Law **
+This Agreement is governed by the laws of United Kingdom.
+
+
+** Severability **
+If any provision of this Agreement shall be held to be invalid or unenforceable, the remainder of this Agreement shall remain in full force and effect. To the extent any express or implied restrictions are not permitted by applicable laws, these express or implied restrictions shall remain in force and effect to the maximum extent permitted by such applicable laws.
+
+
+** Software Setup Requirements **
+For the software to be successfully setup the following are required: A server (hosting) with operating system Linux, PHP v7.1 - v7.3, MySQL database v5.6 or higher, SSL certificate.
+
+Setup of Google API keys (Directions API, Places API, Geocoding API, Maps JavaScript API, Maps Embed API) is also required.
+
+Integration and maintenance of external services and software plugins (e.g. Payment providers, Google services, PCA Predict, Caller ID systems, SMS services, Address Lookup services) are not included in the licence fee and are subject to additional costs.
+
+
+** Refund Policy **
+Our refund policy allows refund within 7 days of your date of purchase if the product or service we provided was faulty and we are not able to fix it or the setup wasn't delivered within agreed time due to delays caused by us.
+
+If the user did not deliver required setup information or failed to communicate the setup with our support team within three months of the purchase, we retain the right not to finalise the setup and the user is not eligible for a refund.
+
+All refunds are process within 14 days.

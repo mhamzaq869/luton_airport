@@ -1,0 +1,12 @@
+[29-Jun-2020 20:16:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php on line 1
+[06-Jul-2020 06:30:15 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php on line 1
+[07-Jul-2020 02:49:12 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/mbbxxjmy/public_html/lutonairport/wp-content/themes/lutontaxi/index.php on line 1

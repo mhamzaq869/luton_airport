@@ -1,0 +1,1446 @@
+** CHANGELOG **
+
+v4.0.4 - 02/07/2020
+- Translation update.
+- Improved system license check.
+- Added new option "Driver income" and "Passenger charge" to duplicate booking form in admin panel.
+- Added an option to send job notification to driver while creating new booking via web booking form.
+- Fixed issue with selecting correct status in booking form in admin panel when in edit mode.
+- Added "Finnish" language translations.
+- Added new option "Border radius" in Settings -> Styles tab to make booking widget customisation easier.
+- Added "Direct link" link in web booking integration tab to make navigation easier. This link allow to direct user to specific integration section.
+- Added advance mode in transactions tab for easier debugging, this options is available in maintenance mode only.
+- Fixed issue with displaying booking attachment in driver app. When the file was opened there was no way to close it or go back.
+- Added an option to show/hide password in Settings -> Integration -> Mail settings -> SMTP section.
+- Added options to override default URL (Home, Booking, My Account, Contact, Feedback and Terms & Conditions) for different languages.
+- Fixed issue with switching language in customer account. This issue occurred when widget was embedded in a multilingual website.
+- Added new options "Display customer company number" and "Display customer company tax number" to Settings -> Invoices tab.
+- Fixed issue with location search in booking form in admin panel. On some servers security mode was blocking search requests.
+- Corrected pricing links in subscription tab.
+- Improved driver tracking for passenger. The system will now show estimated journey time for each route and it will display driver location on the map from the moment he changes booking status to "Onroute".
+- Fixed issue with deleting return booking from trash tab. An error occurred while deleting the booking.
+- Fixed issue with displaying correct business profile logo in driver tracking page.
+- Added help icon to Feedback section in Settings -> General tab.
+- Installer form layout improvements and buttons colours.
+- Added FlightStats integration, this service allows to check if flight is delayed or canceled.
+- Fixed issue with phone number validation in booking form. Some of the phone numbers where displayed as invalid.
+- Enabled access to modules "Driver Availability, Hourly Rate, Schedule Service".
+- Added new section "Check Requirements" in installer. It allows to check which required server settings are on/off.
+- Booking listing and Dispatch layout settings are now saved into database. This new feature allows to share the same settings across different devices and it won't reset after software upgrade.
+
+v4.0.3 - 21/05/2020
+- Added option to manage booking sources. This option is available within source drop down menu in booking form.
+- All sites sources have been merged into one list.
+- Removed "Config" model from migration.
+- Improved hungarian language translations.
+- Disabled activity log buttons.
+- Fixed issue with detecting default business profile.
+- Fixed issue with editing trashed bookings.
+- Fixed issue with sidebar scrolling in Internet Explorer and Edge browsers.
+- Fixed issue with migrations. When GTIDs database option was enabled an error occurred.
+- Fixed issue with displaying vehicle types when the option "Allow submitting booking without price" was enabled.
+- Added new options to "Price settings" section in Settings -> Web Booking Widgets -> General tab.
+- Added cookie secure option in app bootstrap file.
+- Improved options look in Settings -> Styles tab. All options are now more compact and take less space.
+- Added new options to style mobile app look in Settings -> Styles tab.
+- Added in customer account "Edit" option. It will show a popup with a message saying that customer can contact company via email or phone to make changes to booking.
+- Replaced "New booking" with "Booking options" button in booking detail page in customer account.
+- Added driver and vehicle details section to booking detail page in customer account and passenger app.
+- Added Twilio SMS integration.
+- Remove SMSGateway support, the app which sends sms is not working any more.
+- Auto job reminders will no longer be send to driver if the booking status is set to canceled.
+
+v4.0.2 - 08/05/2020
+- Fixed issue with update timeout.
+- Fixed issue with place_id parameter in geocode function, it was set to null and it caused problem with finding location using Google geocode service.
+- Fixed issue with sending notifications from wrong business profile.
+
+v4.0.1 - 04/05/2020
+- Fixed issue with displaying driver name in admin calendar.
+- Improved debug options, added advance mode (reset file permissions, clear temp folder).
+- Improved cron job password generator, it will now generate very strong password using md5 hash.
+- Added new option "Allow driver to upload job attachments/files" in Settings->Users->Driver tab.
+- Added new option "Attach booking tracking link to on-route notification, it will allow customer to view journey details and driver on map" in Settings->Users->Customer tab.
+- Fixed issue with flickering booking widget in horizontal mode.
+- Changed in database reminders description column type from "varchar" to "text".
+- Changed in database meeting point note column type from "varchar" to "text".
+- Added new options to booking form "flight departure number", "flight departure time", "flight to (city)".
+- Added new options to booking form "Adjust a customer pickup time for airport drop-offs to (x) minutes before plane departure time".
+- Admin can now assign vehicle type to driver vehicles.
+- Admin can now set driver commission and passenger charge before the job is dispatched to a driver. If no value is set then the system will automatically calculate these amounts.
+- Changed translation for "Already Paid" to "Payment not required".
+- Added new option "Hide Customer details from notification when Lead passenger is available" to Settings->Users->Customer tab.
+- Added new options to booking form "Lead passenger email address".
+- Changed default booking order in listing tab in driver and admin panels.
+- Added teams functionality to users tab.
+
+v4.0.0 - 08/04/2020
+- Fixed issue with "eto-tracking.js" file name, the AddBlocker browser extension was blocking this file from loading which caused booking tabs not being displayed properly.
+- Improved system page load speed, all panels will load faster now eg. booking listing, dispatch, users, reports tabs and more.
+- Added duplicate option in fixed prices tab to speed up setting up pricing.
+- Simplified web widget integration code by removing description message from iframe which was saying what happens when iframe tag is not supported. All major browsers support this tag now so this message is not needed anymore.
+- Customers can now upload avatar/company logo to their profile which will be displayed in the sidebar menu within their account. If the account was registered as a company the logo will also be displayed on the meeting board.
+- Added new options "Name font size (pixels)", "Show in header (customer logo, admin logo, disable)", "Show in footer (journey details, disable)" in Settings -> Booking -> Meeting board tab.
+- Admins are no longer able to create two customer accounts with the same email address.
+- Improved system updater for slower servers. It will resume the process in case update fails instead of blocking the system entirely.
+- Modules tab has been renamed to Subscription, in this tab admin can see information about his current software plan, view available updates and update the software.
+- Simplified customer, driver and admin panels and sidebars by removing unnecessary icons from buttons and forms.
+- Added trash option to booking listing tab. Now when a booking is deleted it will first go to the trash tab so it can be restored anytime in case it was deleted by a mistake. Bookings removed from the trash tab will be permanently deleted.
+- Changed the order of options in the sidebar in the admin panel to make navigation easier. Now the options are ordered by name except the pricing option which is displayed the first on the list.
+- Company accounts can now add "Departments" in their profile. Once departments are added, the customer can choose which department he is making the booking for.
+- Added integration with "waynium.com" dispatch software, at the moment it can only be activated manually in the config file.
+- Simplified footer in the sidebar in the admin tab by moving the license link to the subscription tab (bottom left corner) so now everything fits in one line.
+- Updated software license.
+- When booking is edited directly from the listing tab it will be automatically marked as read (no highlight).
+- All settings are now displayed in separate tabs instead of an expandable menu.
+- Fixed issue with Cloudflare module settings, it stopped iframe popups from being automatically resized and the popup content could not be displayed in full.
+- Added a new panel in "Settings -> Debug", it checks if all software requirements have been met in order for the software to operate properly. In this section admin can also clear software temporary data to make sure everything is up to date.
+- Added new option in "Settings -> Driver Income" tab where admin can choose which type of charges will be included or excluded in calculating driver income (Child seats, Additional Items, Parking Charges, Payment Charges, Meet & Greet, Discount).
+- Added new option in "Settings -> Pricing -> Other Discounts" tab where admin can choose which type of charges will be included or excluded in calculating customer discount (Child seats, Additional Items, Parking Charges, Meet & Greet).
+- Changed how discount is applied when a return booking is made. The discount will now be applied proportionally to the amount of each booking instead of applying it to all to the first route and then the rest to the second one.
+- Added option to save stats of active drivers based on billing date.
+- Visual improvements to software installer.
+- Added support for SameSite cookie type.
+- Corrected update button icon display in Firefox browser in subscription tab, the icon was out of place.
+- Changed value for feedback type option in Settings -> General tab, it is now set to internal by default.
+- Updated software requirements in license agreement.
+- Improved update progress bar in subscription tab. The progress bar was stopping on the first step in Google Chrome browser.
+- Fixed issue with displaying availability status in driver list. In some cases driver was busy, but the system showed him as available.
+- Fixed issue with removing empty folders in updater.
+- Added option to sort users in listing tab by activity date (photo column). It will allow admin to see who is currently online.
+- Fixed issue with getting service name in booking listing tab. In some cases service name was missing and an error was displayed instead.
+- Added option for admin to see user activity status in user detail page.
+
+v3.25.3 - 26/03/2020
+- Fixed issue with copyright note displaying in the customer account. It was displayed regardless of the setting.
+
+v3.25.2 - 28/02/2020
+- Fixed an issue with the export function in the Booking Report not working in some cases.
+- Fixed an issue with driver commission displaying 0% instead of the actual value in the Driver Report system.
+- Fixed an issue with customer name not being displayed properly in the customer account, the name was coming out of the box.
+
+v3.25.1 - 10/02/2020
+- Improved widget integration with the website. The system will no longer get into redirection loop if the booking url set in the settings is the same as the booking widget url.
+- Disabled autocomplete for payment method field in payment edit tab.
+- Fixed issue with applying correct zone in quotation. When multi-profile option was activated the system applied zones form another profile.
+- Added new option to find passenger details in admin booking form.
+- Disabled option to add custom zones in fixed prices after pressing enter button.
+- Fixed issue with sending invoices to customers in booking listing tab. Once the button send was clicked the response code was displayed in the browser instead of it being hidden.
+- Added AppSecret key to RingCentral integration, this will keep the user login for 7 days instead of 1h.
+- When the vehicle type was set to zero in fixed price the system did not calculate mileage price.
+- Fixed issue with changing date on iOS in some panels, the date could not be saved and error was displayed.
+- Fixed issue with missing infant seat after confirming the booking in admin. When the charge for infant seat was set to zero the system was automatically removing it from the addons list in the booking.
+- Fixed issue with applying wrong Meeting Point instruction when multisite option was activated.
+- Fixed issue with minimum booking time option. When customer was making a booking in different timezone the time restriction did not apply in some cases.
+
+v3.25.0 - 30/01/2020
+- Improved tracking data migration. There was a problem with creating foreign keys when booking data was missing.
+- Improved changelog display in module tab. There was no gap between the version rows.
+- Improved feedback table creation migration, some old installations had this table already created manually.
+- Improved customer name display in admin booking listing tab. Customer name was not displayed when multisite mode was activated.
+- Fixed issue with "Loading more" in driver dropdown menu in booking edit tab. There was a problem with filtering available driver count.
+- Fixed issue with "Navigate to" button in driver job detail tab, the navigation link could not be opened on iOS devices.
+- Fixed issue with swap location button, the locations were not reversed properly.
+- Improved export option in admin booking listing tab, now the export will also take into account table settings e.g column order, column visibility and filters.
+- Added toolbar icons in report listing tab for mobile devices.
+- Copyright year change.
+- Fixed problem with loading iframeResizer plugin in reports and modules tabs when Caller ID option was enabled.
+- Added customer details e.g. name, email and phone number to create new booking button in Caller ID tab. This will auto prefill customer details in booking form.
+- Added a few new options "Show passenger name in calendar", "Show account name in calendar" and "Show service type in calendar" in Settings -> Users -> Admin tab.
+- Narrowed customer account, passenger name and lead passenger name columns in bookings list.
+- Removed price formatting from Excel file in booking listing export tab, this will allow to sum up prices.
+- Visual improvements to driver availability creation form.
+- Fixed issue with selecting vehicle type when "Show passenger, luggage and hand luggage amount options in the first step of the booking" option was enabled. The summary box was showing the wrong vehicle type.
+- Added new option "Attach journey details in iCal format to booking confirmation email" to Settings -> Web Widget -> General tab.
+- To speed up the booking process, add new booking form in Caller ID popup will now be opened by default.
+- Added license check in auto update controller to get the latest available version information.
+- Improved auto updater functionality.
+- Added in Barclaycard payment method integration tab the details which need to be updated in payment provider account.
+- Improved layout of the customer account and passenger app, a clearer view and easier navigation.
+- Improved driver availability check, the system could not block some dates which were set as busy in the driver calendar.
+- Simplified driver and admin profile edit form. All fields and button icons were removed to make the form clearer.
+- Report tab improvements, added charts, export, sent to email options and expanded data table with additional columns.
+- Added new license status "suspension warning".
+- After adding new event to driver calendar the popup will be automatically closed.
+- Restricted access to "Availability" module for all users who did not purchased it.
+- If holiday charge does not have value or title it will be automatically removed while saving settings.
+- Improved booking widget integration code for multi-site. Now the system will also generate site key parameter.
+- Added new option "Better use of postcode based Fixed Price system" to Settings -> Google tab.
+
+v3.24.2 - 23/12/2019
+- Bring back the old report option in booking listing tab. This option will be replaced with new report module in the next main software update.
+
+v3.24.1 - 20/12/2019
+- RingCentral (caller id widget) will now also be displayed in dispatch, reports and modules tabs.
+- Fixed issue with displaying Caller ID popup. When someone was calling no popup was displayed.
+- Fixed issue with generating reports, the booking creation date was used by default instead of journey date.
+- Added date type filter option in reports tab.
+
+v3.24.0 - 18/12/2019
+- Fixed issue with editing booking status colour in booking form settings popup in admin panel. The form was not showing already set colours.
+- Fixed issue with saving booking in admin panel. When ModSecurity option on the server was enabled, 403 (Forbidden) error was thrown when sending HTML code to the server.
+- Fixed issue with accepting and rejecting jobs in driver account. The new setting which allows to do only one job at the time was blocking it.
+- Option "Disable cash payment for airport pickups" will now also apply to return journey airport pickup. This option is available in Settings -> Web Booking Widget -> Step 3 tab.
+- Added a new page "Getting Started" in the admin which will help admin to quickly get started using software.
+- Improved password generator option in installer, it will now suggest stronger password.
+- Added preview option in notifications tab in admin panel. This option allows admin to see how email, sms or push notifications look like.
+- Added option for disabling feedback link in notifications and customer account. This option is available in Settings -> General -> Feedback section.
+- Added option to open "More Options" section by default in booking form. This setting is available in Settings -> Web Booking Widget -> Step 3.
+- Changed in PayPal "_parent" to "_top" form target parameter to avoid problems with popup permissions when iframe is loaded in another iFrame. Wix website builder has this kind of setup.
+- Corrected Booking Tracking table migration. There was a problem with foreign keys, the need to be unique in the database.
+- Improved current location finding in "Navigate" option in driver account.
+- Fixed issue with "Add via" button on iOS 13 (iPhone and iPad). The screen was freezing when clicked on the button due to CSS incompatibility.
+- Optimised Tracking History functionality for better performance and data storage.
+- Fixed issue with operating area. The system was deducting driver journey when there was a fixed price set between base and pickup instead of pickup and dropoff.
+- Datetime picker dropdown in booking edit form will now display times every 5 minutes and if auto dispatch option is activated then every 1 minute.
+- Added options to enable/disable what the driver sees in his calendar. These options are available in Settings->Users->Driver.
+- Fixed issue with search option in admin calendar, it was displaying 'NAN' value due to missing language variable in ConfigController.php file.
+- Removed all unused environment variables from config.php file.
+- Added Reports section where admin can generate Driver and Payment reports which can later be saved for future use.
+- Corrected option to disable cash payment for airport pickups. The system was also disabling cash payment for non airport pickups.
+
+v3.23.0 - 20/11/2019
+- Booking Reference Number option requires now at least one auto generated tag to be used in order to avoid reference number duplicates.
+- Added option to set default page that will be open after admin login (Settings->Users->Admin).
+- Added option to enable/disable "Company registration number" and "Company VAT number" fields in customer profile.
+- Added Strong Customer Authentication (SCA) support in Square payment method.
+- Fixed problem with removing bookings on PHP 7.3, there was a problem with count() function in softDelete controller.
+- Added config to enable fixed prices import button, this option is available for super admin only.
+- Added option to disable cash payment for airport pickups, this option in available in Settings->Web Booking Widget->Step 3.
+- Improved web booking widget integration guide to make get current location button to work in iFrame.
+- Added option to enable/disable get current location button in booking widget. This setting is available in Settings->Web Booking Widget->Step 1.
+- Improved updater version check to make multisite upgrade process easier.
+- Added suspended mode which will limit use of add/edit bookings, assign driver and generating reports.
+- Fixed issue in several admin tabs e.g. bookings. When using search option the page number was not resetting and search results could not displayed.
+- Fixed issue with groupBy in Frontend controller. It was causing error while searching locations on some servers.
+- Geolocation button has been hidden for scheduled services. It is not needed as customer can only choose address from provided list of locations.
+- When email and sms testing options are enable system will automatically add a warning alert to that message so admin knows that no message has been sent to customer or driver as all of them have been routed to admin inbox.
+- When option force location selection is activated the system will no longer show a message "Unable to find address" warning message when there is no address entered in the field.
+- Added switch to enabled/disable passenger, luggage and hand luggage amount options in first step of the booking. This setting is available in Settings -> Web Booking Widget tab.
+- Added basic support for exporting translations to xlsx, xls and csv formats. This option is available only for super admin for now.
+- Added option to customer profile in admin panel called "Account payment - Request now button". This setting allow individually decide if Company is allowed to make booking via Request now button (when Enable) instead of making payment for each booking.
+- Allow newly registered companies to use account payment - Request now button. This option in available in Settings -> Web Booking Widget -> Step 3.
+- PHPExcel library correction to make it working on PHP 7.3.
+- Changed in database fixed prices value column to type double(8,2). Previous value caused problems with saving records where the price was longer than 5 digits.
+- Added journey details in iCal format to booking confirmation email. This will allow customer to save journey details in his calendar.
+- Added support for remote software auto update. This option is only available to super admin.
+- Transferred application config data from ".env" to "config.php" file to improve security.
+- Added setting to control locations where backups and log files are stored in the software. This option is available only to super admin.
+- Added option to display journey on the map in driver panel.
+- Added option to track driver journey in admin and customer panels.
+- Added ref number to Stripe checkout page. It will now be visible in Stripe dashboard so admin can find a booking faster.
+- Changed in database charges value column to type double(8,2). Previous value caused problems with saving records where the price was longer than 5 digits.
+- When booking has been discounted to zero the system will automatically change booking status from incomplete to complete or requested depending on admin settings.
+
+v3.22.0 - 09/09/2019
+- Corrected passing subscription name to API.
+- Fixed an issue with saving airport detection postcodes, now the system allows to use postcodes separated with enter or comma sign.
+- Help popup in location tab can now be open with a mouse click.
+- Added an example next to each field in location creation tab.
+- Full address field in location creation tab is now required, it is used to properly geocode locations.
+- Added max value limit in vehicle type creation form to prevent booking slow down when too big value was set by a mistake.
+- Added button "Save & Close" in fixed prices form.
+- Listing tabs will no longer reset to the first page after edit now it will stay on the same page.
+- Improved zones detection in fixed prices, it did not apply zones in some cases.
+- All special characters displayed in admin and driver booking listing info popup will now be converted into HTML code to prevent display errors.
+- Booking reference number generator correction, reverted booking id in place of route id.
+- Added "createDateTime", "createDate", "createTime", "createDateTimeFormatted", "createDateFormatted" and "createTimeFormatted" parameter to booking ref number format.
+- License update.
+- Fixed problem with sql dumper in software updater, it did not accept "-" characters in table list name.
+- Corrected issue with overlapping containers in 3rd step of the booking process, it happened when browser was set to certain dimensions.
+- Added basic support for auto driver dispatch.
+- Optimised driver and admin panels for performance, it will now send less queries to database on each page load which will result in faster loading.
+- Fixed issue with Stripe payment method post transaction notifications webhook, it redirecting to another page instead of returning successful message.
+- Improved time picker spacing, arrows were overlapping with numbers in Safari browser.
+- Removed default Night Charge setting for all new software installations.
+- Improved Google API key section look in settings tab to make the key setup process easier.
+
+v3.21.0 - 14/08/2019
+- Added option to search fixed prices by location name.
+- Vehicle types list will now be displayed in specified order in booking form.
+- Fixed prices help popover will now be automatically closed when clicked outside of it.
+- Added timezone option in user profile.
+- Added basic support for cron tasks e.g. sending job reminders.
+- Cron settings are now stored in the database.
+- When update time has expired the system will block the user from performing an update.
+- Added basic support for importing customers from a file to database.
+- The uninstall module button is now hidden.
+- TranslationLoader will now switch between file and database type depending on the route.
+- All unpaid unconfirmed bookings will now get initial status incomplete instead of unconfirmed.
+- Added "pickupDateTime", "pickupDate", "pickupTime", "pickupDateTimeFormatted", "pickupDateFormatted" and "pickupTimeFormatted" parameter to booking ref number format.
+- Booking route table migration corrections.
+- Fixed prices postcodes did not show on some of the servers in listing tab.
+- Addresses in booking listing tab will be automatically truncate if the address is too long.
+- When map is loaded the system will display location that has been saved in database instead of default one.
+- Added passenger amount column in booking listing tab.
+- Fixed issue with booking search in driver listing tab, during search an error was coming up.
+- Push notifications will no longer show HTML code.
+- Corrected vehicle type image display in booking form.
+- Added scrollbar in sidebar menu as indication to user that he can scroll down.
+- Added password generator to cron job security key.
+- Fixed problem with white screen coming up in dispatch tab when clicking on the driver that is offline.
+- Moved "eto.json" file from root to tmp folder.
+- Improved translation manager functionality, easier editing and translation finding.
+- Updated PHP libraries.
+- Software performance improvements, less database queries.
+- Code optimisation.
+- Installer sendmail path option corrections.
+- ALL to ALL locations in fixed prices are no longer allowed.
+- Added column visibility, reset and reload buttons in fixed prices listing tab.
+- Added "Z" symbol for "Zone" in fixed prices listing tab for easier navigation.
+- Added option in admin panel to disallow drivers to cancel the job.
+- Added option in admin panel to disable "On route", "Arrived" and "On board" status buttons in driver panel.
+- Added option in booking form settings for changing status colours.
+- Added option in booking widget settings for hiding "Book for someone else" section.
+- Added option in booking widget settings for hiding "Comments" section.
+- If customer is logged in and home address is set, pickup address will be automatically be prefilled.
+- Added option to advance settings which will force customer home address if available, when set then no address change will be possible in pickup address field.
+- Added basic support for replacing map pin icon by adding a file to uploads folder with the name "map_pin.png".
+- Fixed problem with applying "Restricted Areas" when two different vehicle types, date and time overlap.
+- Notification errors (caused by incorrect SMS, Email setup) will now be saved to system log file instead of blocking the code.
+- Web booking widget will now automatically detect which service is in use and apply correct styling based on selected service (one or two fields mode).
+- Changed system logs to be saved in multiple files (daily) instead of a single file (smaller files sizes).
+- Improved public_path, asset_path and asset_url helpers.
+- Fixed problem with downloading multiple invoices in admin booking listing tab.
+- Added option to show/hide minute time picker in booking widget.
+- The option "Require full address" in booking settings has been split into three Pickup, Dropoff, Via.
+- Added Strong Customer Authentication (SCA) support in Stripe payment method.
+- Added switch to enable/disable multi vehicle option in booking form in admin (advance settings).
+- System images optimisation.
+- Fixed issue with duplicate steps in booking form when using Google Translator.
+- Added option in settings "Show edit profile button in driver account".
+- Added option in settings "Allow driver to edit insurance number".
+- Added option in settings "Allow driver to edit driving license number".
+- Added option in settings "Allow driver to edit PCO license number".
+- Added option in settings "Allow driver to edit PHV license number".
+- Improved booking reference number help section, added explanation usage of each tag.
+
+v3.20.0 - 01/07/2019
+- Added support for PHP 7.0 in Redsys payment method.
+- Added option to allow modules access.
+- Fixed problem with adding passenger on mobile device.
+- Fixed problem with scrolling in admin booking form.
+- Added support for saving translations to database.
+- Added translation footer message in booking emails.
+- Corrected booking thank you page layout.
+- Database migration correction.
+- Fixed issue with PostcodeAnywhere location search in admin booking form.
+- Hourly service will be added before minimum price is applied.
+- If route distance is equal to zero the system will not apply any mileage factors.
+- Booking and Customer widget performance optimisation.
+- Removed message "Not available" from vehicle type listing when enquiry button is enabled.
+- Added option "Allow guest bookings" to config tab.
+- Made vehicle type icons smaller.
+- Zones are not longer in beta version.
+- Fixed issues with opening booking form options on mobile.
+- Fixed issue with closing calendar popup in driver app.
+- Added new custom field option to booking form.
+- Added search option in calendar tab in admin panel.
+- Added new "Unassigned" option to booking source list.
+- Added option to upload files to feedback.
+- System will now clear cache data before upgrade.
+- Allowed new file extensions for feedback and user attachments upload.
+- Fixed problem with AppLoader.php file upload via FTP.
+- Added file extension validation rule.
+- Fixed issue with positioning phone country code popup.
+- Added option to enable/disable vehicle not available message.
+- Vehicle list will now longer scroll to map box on page load.
+- Driver journey is now calculated to the closest pickup or dropoff location.
+- Added "Worldpay Online Payments" payment integration.
+- Updated PHP libraries to the latest available versions.
+- Fixed pagination in fixed prices tab, it did not divide results in pages.
+- Fixed problem with passing waypoint location data in URL.
+- Translation corrections.
+- Fixed issue with Spatie\TranslationLoader in config file, it could not finish migration due to lack of database table.
+- Expired database cache will automatically be cleared each day.
+- Fixed issue with running migration after software update.
+
+v3.19.0 - 29/05/2019
+- Translation corrections.
+- Module view corrections.
+- Changed default driver list order in booking form to be displayed by Unique ID.
+- Payment method field is now closed by default in booking form.
+- Displayed unconfirmed bookings in next24 tab in dispatch.
+- All drivers with status unavailable will disappear from the map after 1h of inactivity.
+- When the journey price is zero the vehicle type will not be shown on the vehicle list in the booking form.
+- Added new column to booking listing tab to be able to sort bookings by read/unread parameter.
+- Fixed issue with date and time picker being cut off in discount, fixed prices tabs.
+- Improved updater functionality.
+- Moved "Return Journey" buttons to location container for easier navigation.
+- Added "Modules" link to main menu.
+- Updated vendor libraries.
+- Added password generator to installer.
+
+v3.18.0 - 16/05/2019
+- Added support for PHP v7.2 and v7.3.
+- Language corrections.
+- Admin booking form improvements.
+- Added "Zones" functionality.
+- Dispatch map improvements.
+- Installer improvements.
+- Database migrations improvements.
+- Payment link send from admin panel will now be send in preferred customer language.
+- HTML tags will be automatically removed from all SMS messages now.
+- Added settings for booking form and map in dispatch tab.
+- Added option to mark booking as read/unread in booking listing tab.
+- Added new tab "Next 24h" in booking & dispatch panel.
+- Added option to config tab for sending test email message.
+- Added help info to "Autocomplete - Force selection" option to Google settings section tab.
+- Made updates to map and booking listing less frequent to improve performance.
+- Removed unused table "loyalty_program" from database.
+- Added "sendmail_path" server configuration detection.
+
+v3.17.0 - 17/04/2019
+- Improved multisite support.
+
+v3.16.0 - 10/04/2019
+- Improved application installer.
+- Added option to remove whitespaces from company settings in config tab.
+- Added driver availability status.
+
+v3.15.0 - 04/04/2019
+- Added "SMS service" option to config tab.
+- Added option to load timezone form database.
+- Fixed problem with auto booking confirm option quote.
+- Improved translations.
+
+v3.14.1 - 03/04/2019
+- Updated driver app name and links.
+- Dutch translation improvements.
+- Added new option "Attach booking details to driver assign notification email" and "Attach booking details to driver assign notification sms" to config tab.
+- Added new option "Attach booking details to customer booking confirmation notification sms" to config tab.
+
+v3.14.0 - 02/04/2019
+- Added availability status in driver profile.
+
+v3.13.0 - 01/04/2019
+- Changed api_key, profile_id, ref_id etc. columns and variables.
+- Forced SSL connection for TextLocal api connection.
+- Notifications translations improvements.
+- Added option to send driver details to customer during driver assign process.
+
+v3.12.0 - 18/03/2019
+- Added software upgrade option.
+- Admin cannot change user role once the user has been created.
+- Improved driver assign option in booking listing tab. Admin can now set commission, cash, notification fields in one go.
+- Hourly service will now longer show enquire button.
+- Added "GP webpay" payment method.
+- Added modules support to the system which will allow to user to use only functionalities which he needs.
+- Removed "eto" config file.
+- Disabled browser autocomplete option in booking form and payment edit page.
+- Improved phone international country code detection.
+- Removed disabled title in passenger name in frontend booking form.
+- Renamed "Default" option to "Suggested by Google" in "Route type" field in config tab.
+- Fixed problem with duplicating booking entries in frontend booking form.
+- Improved cache system in booking quote.
+- Improved invoice printing option.
+- Improved preferred booking language functionality.
+- Code namespace changes across the app.
+
+v3.11.3 - 05/03/2019
+- Updated translations for config tab.
+- Fixed problem with Restricted Area when default vehicle is selected.
+- Update Czech translations.
+- Now admin can search bookings by source details.
+
+v3.11.2 - 27/02/2019
+- Added debugger package for testing.
+- Booking form customer and driver functionality patch.
+
+v3.11.1 - 20/02/2019
+- Add status colour highlight in booking listing tab.
+
+v3.11.0 - 04/02/2019
+- Added new booking form in admin panel.
+- Improved fixed prices import option.
+- Removed white spaces from api keys in payment tab.
+- An error message will be displayed to user if Google API error occurred.
+- Added option "Min number of characters for location suggestions search" in admin tab.
+- Added option to enable/disable members benefits.
+- Displayed source and preferred notification language in booking detail tab.
+- Added Google Services cache to speed up quotation process.
+- Improved debugging tools.
+- Added Czech and Dutch translations.
+- Removed "galleries" folder form images.
+
+v3.10.3 - 25/01/2019
+- Payment method will now be displayed in modal title.
+- Added Stripe iDEAL payment method integration.
+- Added "params" column to transaction table.
+
+v3.10.2 - 17/01/2019
+- Added help section to location tab.
+- Updated year in copyright note.
+- Booking confirmation and thank you page translations and layout improvements.
+- Improved booking export option, no services will be added to the export list if service option is deactivated.
+- Added site URL mapping option in site config file (payment link).
+- Improved mobile app connection instructions in admin panel.
+- Added scroll bar CSS styling.
+- Added Google API Key restrictions information to setting tab.
+- Language switcher will be now hidden until the booking form is fully loaded.
+- Added "Book by phone" option in booking form.
+- Added option to show/hide return journey, add via, swap address, book now buttons in booking form.
+- Fixed problem with removing search filters in booking listing tab.
+- Added option to choose if the booking will be confirm or unconfirmed after it is created by a customer.
+- Updated "intlTelInput" plugin to newest version.
+- Fixed bug with copying phone number to booking form for logged in customer.
+- Added debug section in config tab.
+- Removed confirm booking status and renamed pending status to confirmed.
+- From now on Admin will not receive any notification in edit mode, because he is the one doing the change and he knows what he is happening.
+- New bookings will be highlight in booking listing tab in admin.
+
+v3.10.1 - 17/12/2018
+- Booking form layout & styling improvements.
+
+v3.10.0 - 26/11/2018
+- Added option to choose how to display service dropdown or tabs.
+- Added to localization settings section option to control how the names are displayed, full names or language codes.
+- Services can be display as tabs.
+- Set dispatch as default page after login if this module is activated.
+- Updated select2 plugin.
+- Hungarian translation corrections.
+- Added booking date to driver details SMS.
+- Corrected phone country code box positioning on mobile.
+- Updated license.
+- Changed quote function remote connection cURL to GuzzleHttp.
+- Improved modal window displaying on iPhone.
+- Added "Portuguese (Brazil)" language.
+- Updated web widget integration page.
+- Updated "Polish" language translation.
+- Improved location search option.
+- Corrected mobile app instruction.
+- Improved booking form user experience.
+- Added option to enter member benefits.
+- Added option to enable/disable mini web booking widget header.
+- Improved help section in discount tab.
+- Improved help section in payment method tab.
+- Added option to hide vehicle without price.
+- Added option to display vehicle type in calendar.
+- Added option to send booking details via SMS to driver.
+
+v3.9.6 - 21/11/2018
+- Updated iframeResizer plugin.
+
+v3.9.5 - 20/11/2018
+- Added option to choose how the driver journey will be calculated
+
+v3.9.4 - 15/11/2018
+- Added swap location button to mini booking widget.
+
+v3.9.3 - 06/11/2018
+- Added placeholder text "Optional" to via fields in booking.
+- Fixed problem with PDF library when using PHP 7.1.
+- Added get current location button to booking form.
+- Added swap location button to booking form.
+
+v3.9.2 - 05/11/2018
+- Improved login and register page style.
+- Improved multisite functionality in app loader function.
+- Fixed problem with saving "feedback type" option in config tab.
+- Added scroll to top option in add new booking form in dispatch.
+- Feedback and T&C external links are no longer required when internal system is in use.
+- Fixed problem with displaying correct feedback link in customer account.
+
+v3.9.1 - 26/10/2018
+- Improved installer.
+- Improved config tab.
+
+v3.9.0 - 15/10/2018
+- Added dispatcher tab.
+- RingCentral changed app key.
+- Improved quote location geocoding function.
+- Improved installation module.
+- Moved pricing to settings menu.
+- Added web widget integration page to settings menu.
+- Improved in quote module driver journey route finding (shortest).
+- Changed "_parent" to "_top" target link to avoid problems with pupup permissions when iframe loaded in another iframe.
+- Improved "Airport detection" module in backend.
+
+v3.8.6 - 03/10/2018
+- Added full booking SMS notification.
+- Fixed bug with wrong formatting in pdf library when running php 7.1.
+
+v3.8.5 - 02/10/2018
+- Moved "Vehicles" module to settings.
+
+v3.8.4 - 01/10/2018
+- Added new option "Fastest (Without traffic)" to route type in Google settings.
+- Updated license.
+- Changed translations form "Reload" to "Refresh".
+- Trim white spaces in URLs in global config.
+
+v3.8.3 - 26/09/2018
+- Updated documentation links.
+- Updated iframeResizer plugin.
+
+v3.8.2 - 17/09/2018
+- Added new source "Admin" in booking edit tab for all new installations.
+- Improved fixed price import option.
+- PayPal transaction notification improvements.
+
+v3.8.1 - 14/09/2018
+- Disabled autocomplete in booking address field for Google Chrome browser.
+- Added operating area check to scheduled service.
+
+v3.8.0 - 11/09/2018
+- "ETO ENGINE" has been renamed to "EasyTaxiOffice".
+- Updated license.
+- Updated RingCentral integration.
+
+v3.7.6 - 11/09/2018
+- Fixed problem with sending duplicate notifications when transaction status is set to paid and the link session has expired.
+
+v3.7.5 - 04/09/2018
+- Added "channelId" to expo push notifications.
+- Improved notification messages.
+
+v3.7.4 - 28/08/2018
+- Changed default value for "incomplete_bookings_delete_after" option to 72h.
+
+v3.7.3 - 23/08/2018
+- Updated "date range picker" plugin to the latest version.
+- Added sortable plugin.
+
+v3.7.2 - 22/08/2018
+- Updated license.
+- Improved image resizing functionality.
+- Added help popup to Fixed Prices tab.
+- Added Google services and Textlocal integration instruction to config tab.
+
+v3.7.1 - 20/08/2018
+- Updated notification translations.
+
+v3.7.0 - 16/08/2018
+- Added "optional" message to full address and comments fields in booking form.
+- Removed SSL message warning from Stripe payment page.
+- Added email verification in booking form in admin panel.
+- Upgraded "Bootstrap Touchspin" plugin to the latest version.
+- Added min booking time countdown in booking form.
+- Added help info to vehicle type image upload option.
+
+v3.6.4 - 07/08/2018
+- Fixed problem with min booking time in scheduled service.
+- Added help info in payment method page.
+- Added option to trim white spaces from API key fields during saving.
+- Fixed issue with onload scrolling in customer account.
+- Added RingCentral caller ID support.
+
+v3.6.3 - 02/08/2018
+- Added no transaction error message in payment page.
+- Fixed problem with direction route finding. The problem occurred when the date was in the past (old bookings).
+- Added option to hide service dropdown menu if there is only one option available.
+
+v3.6.2 - 01/08/2018
+- Improved Google Analytics and Adwords tracking.
+
+v3.6.1 - 30/07/2018
+- Added dropdown arrow icon support for iOS devices.
+- Booking from and customer account layout improvements.
+
+v3.6.0 - 29/07/2018
+- Added option to enable/disable postcode check in quote module.
+- Removed input max number limit.
+- Added service type restriction to payment methods.
+- Hide services dropdown menu if there is only one option available.
+- Disabled minimum date restriction in booking edit form.
+- Disabled double quote check when date of the booking has changed.
+- Removed "no location" error message from booking edit form.
+- Improved scheduled service time selection on iOS.
+
+v3.5.11 - 27/07/2018
+- Fixed problem with airport detection in quote module.
+- Improved info popups in config tab.
+
+v3.5.10 - 26/07/2018
+- Improved customer registration form.
+- Improved translations.
+- Improved user account functionality.
+- Improved booking form functionality.
+- Added international phone number support in booking form.
+
+v3.5.9 - 18/07/2018
+- Fixed problem with night surcharge range overlapping, double price.
+- Fixed problem with distance "Add" factor when via and operating address is present.
+- Added "no_https_redirect" option which fixes problem with WorldPay payment response.
+
+v3.5.8 - 13/07/2018
+- Price quote improvements.
+
+v3.5.7 - 09/07/2018
+- Price quote code improvements.
+
+v3.5.6 - 07/07/2018
+- Fixed problem with accuracy out of range in users database table.
+
+v3.5.5 - 05/07/2018
+- Improved fixed prices import.
+
+v3.5.4 - 03/07/2018
+- Admin booking edit tab improvements.
+
+v3.5.3 - 02/07/2018
+- Fixed bug with min booking time in booking form.
+- Fixed bug in price quote. Removed double calculations when applying vehicle factor in base price when via address has been entered.
+
+v3.5.2 - 25/06/2018
+- Improved Scheduled Route functionality.
+- Driver booking tab improvements.
+- Updated app store icons.
+- Updated translations.
+- Renamed "Language" section to "Localization" in config tab and moved some option in from other sections.
+- Added few new options to date and time format field in config tab.
+- Improved night surcharge functionality. Now more options can be added.
+
+v3.5.1 - 19/06/2018
+- Updated translations in Types of Vehicles tab.
+- Fixed problem with Stripe payment redirect which caused sending a duplicate booking confirmation email.
+
+v3.5.0 - 18/06/2018
+- Added warning message for meeting board "download" and "print" buttons in driver app.
+- Added feedback functionality (Comments, Lost & Found, Complaints).
+
+v3.4.34 - 14/06/2018
+- Added option to enable iFrame scroll to top functionality and position offset.
+- Improved delete record message in vehicle type tab.
+- Used customer name as sender in admin email notifications.
+- Fixed bug with removing site_id index in service database migration.
+- Added option to calculate return journey price the same way as one way.
+
+v3.4.33 - 11/06/2018
+- Added booking details to cancel booking email.
+- When new booking is created via admin panel and the driver is assigned at the same time, the system will now send booking details email too.
+- Added meeting board print and download functionality.
+- Added new status "Driver cancelled" for unfinished jobs.
+- Added driver app trial mode.
+
+v3.4.32 - 07/06/2018
+- Added scheduled route option in services.
+- Fixed bug with booking report calculations, division by zero.
+- Placeholder code improvements.
+- Added group booking for scheduled routes.
+
+v3.4.31 - 28/05/2018
+- Added services functionality.
+- Fixed bug with Squareup payment redirection when in iframe.
+- Fixed bug with Squareup payment notification status update.
+
+v3.4.30 - 23/05/2018
+- Forced quote check on date update in booking edit tab.
+- Notification will only be send if "Send notification" option has been check in edit booking tab.
+- Moved "custom" folder to "uploads" folder.
+- Updated translations.
+- Map improvements in admin panel.
+
+v3.4.29 - 23/05/2018
+- Improved booking ref number generation function.
+
+v3.4.28 - 22/05/2018
+- Added SMS Gateway API support. It allows to send SMS directly from mobile.
+- Added option to enable or disable extra geocode location finder function in quote file.
+
+v3.4.27 - 17/05/2018
+- Added option to send driver details to customer when driver is assigned.
+- Moved "timestamp" site config option to app config.
+- Added option to switch between internal or external Terms and Conditions.
+
+v3.4.26 - 16/05/2018
+- Masked Stripe keys in edit payment type.
+- Fixed problem with map scaling in admin panel.
+- Simplified user and vehicle menu in admin tab.
+
+v3.4.25 - 16/05/2018
+- Fixed bug with calculating total price in admin (division by zero).
+
+v3.4.24 - 10/05/2018
+- Added preferred notification language in booking edit tab.
+- Improved booking and calendar options.
+- Improved admin and driver interface.
+- Moved all models classes to "Models" directory.
+- Added option to set user's default language.
+- Few bug fixes.
+
+v3.4.23 - 09/05/2018
+- Send booking email in default profile language.
+- Updated "fullcalendar" plugin.
+- Improved return url option in edit booking tab.
+- Calendar will now remember current state.
+- Added booking details to confirmation email.
+- Added few option to control booking details visibility in admin calendar.
+- Added additional info option to BACS payment method.
+
+v3.4.22 - 07/05/2018
+- Moved ETO "libraries" folder to vendor "etoengine" folder.
+- Added "minutes after landing" text to driver job detail page.
+
+v3.4.21 - 03/05/2018
+- Added some code for dispatch page.
+
+v3.4.20 - 26/04/2018
+- Fixed bug with payment testing value.
+- Added auto redirection to previous page after editing the booking.
+- Booking listing will now expand its height depending on page size and not the content as it was before.
+- Moved "Driver App" menu to "Settings" menu.
+- Fixed bug with modal jumping to bottom of the page on iOS device.
+- Fixed bug with Google Maps in admin.
+- Added auto refresh counts in driver dashboard.
+
+v3.4.19 - 23/04/2018
+- Removed double entry check in adding function in "Restricted Areas" tab.
+- Mobile API improvements.
+- Added Customer push notifications.
+- Added Customer app support.
+
+v3.4.18 - 18/04/2018
+- Few bug fixes
+
+v3.4.17 - 13/04/2018
+- Added Squareup payment method.
+- Bug fixes.
+- Layout improvements.
+
+v3.4.16 - 03/04/2018
+- Updated Hungarian translations.
+
+v3.4.15 - 02/04/2018
+- Added "Force HTTPS" option in config tab.
+- Added "Allow services" and "Allow driver availability" options to config tab.
+- Added calendar tab in driver panel.
+- Improved calendar in admin.
+
+v3.4.14 - 28/03/2018
+- Added option for creating and duplicating transactions in booking payment history tab.
+
+v3.4.13 - 27/03/2018
+- Added feedback link to feedback SMS notification.
+- Removed predefined message from SMS message box in send SMS tab.
+- Added booking details to assign notification email.
+- Added flight landing time option to booking.
+
+v3.4.12 - 24/03/2018
+- English translation improvements.
+- Added Polish & German translations.
+- Fixed problem with auto assign status in edit booking tab.
+- Fixed problem with vehicle type restriction in parking charge quote option.
+
+v3.4.11 - 24/03/2018
+- Improved Google navigation link in driver account.
+- Added option to sort vehicles by "unique_id" column.
+
+v3.4.10 - 21/03/2018
+- Improved translations for notifications.
+- Added price breakdown option in edit booking tab.
+- Improved driver and vehicle data popups in booking listing.
+
+v3.4.9 - 21/03/2018
+- Few bug fixes in add new booking tab in admin.
+- Disabled option "Disable book now button if terms are not checked" in admin config tab.
+- Added "Save and Close" button in booking edit tab.
+- Improved error messages in booking edit tab.
+
+v3.4.8 - 17/03/2018
+- Translations update.
+- Added French translations.
+
+v3.4.7 - 16/03/2018
+- Changed URLs in software installer.
+- Added new option "Show Company Name next to the name" in setting tab.
+- Simplified search From and To fields in booking edit tab.
+- Removed "booking_cancel_notification" option from config tab. Now all notifications will be managed from one tab.
+- Added option to change status directly from booking listing tab.
+- Improved booking status notification so they can be sent via different channels.
+- Fixed bug in fixed prices regexp.
+- Added booking amount for each link in admin main menu.
+- Improved search system in booking edit tab in admin.
+- Improved mail option in backend, added sendmail.
+- Added "Support" link in main menu in backend.
+- Changed "Available Updates" link in admin.
+
+v3.4.6
+- Added fixed price import option.
+- Changed images and upload folder structure to simplify software upgrade.
+- Fixed some bug in parking charge in quote file.
+- Allowed booking cancelation for more statuses eg. 'pending','confirmed','assigned','rejected','incomplete','requested','quote'.
+- Moved option assign customer to top of its section.
+- Added vehicle min price option in config tab.
+- Added migration to clean up some old database table.
+- Improved invoice file name format
+
+v3.4.5
+- Fixed bug with displaying service type and duration in booking listing.
+- Add database clean up migration.
+
+v3.4.4
+- Displayed "service type" and "service duration" options in booking email and details view.
+- Displayed price summary in booking detail page and email.
+- Changed order for few options in config tab.
+
+v3.4.3
+- Autocomplete data when assigning customer.
+- Extend loading time message in view to 15s.
+- Added "New" symbol to booking listing as indication of new booking creation.
+- Added "image_dimensions" config option.
+
+v3.4.2
+- Removed unused fonts form mPDF library.
+- Added driver unique_id to driver list in filter and sorted it by this value.
+- After creating new booking user will be redirected to Latest page.
+- Added new php module "Zip" to installation requirements.
+
+v3.4.1
+- Updated .htaccess file with new settings.
+- Added driver and status notes in the booking.
+- Fixed bug with loading custom language translation file.
+- Fixed problem with logo migration.
+- "Debug" option in config has been moved to integration tab.
+- "ETO footer" option has been set as a last option in its section.
+- Added "Show/Hide" functionality to some fields in config tab.
+
+v3.4.0
+- Changed directory structure.
+- Added software installer.
+- Fixed bug with displaying vehicle details in email when driver changes status onroute.
+
+v3.3.45
+- Added option to update license_key in admin.
+
+v3.3.44
+- Translations corrections in booking listing tab in admin.
+- Improved popup display in booking listing tab in admin.
+- Added logo upload option in admin.
+- Removed "url_admin" config option.
+
+v3.3.43
+- Added view invoice option in listing.
+- Improved duplicate booking option.
+- Improved booking listing menu options.
+
+v3.3.42
+- Fixed bug with minimum booking time in booking form.
+- Fixed bug with map search in admin.
+- Improved text in config tab.
+- Added new status "arrived".
+- Displayed driver details in booking details page in admin.
+- Added option to force english language in admin panel.
+
+v3.3.41
+- Improved translations.
+- Improved language switcher.
+- Added message about SSL in stripe payment method.
+
+v3.3.40
+- Added "Italian" and "Hungarian" translations.
+
+v3.3.39
+- Interface improvements.
+- Code improvements in admin user tab.
+- Added user online status in avatar in users tab.
+- Improved UI in vehicle type listing tab.
+- Improve responsiveness of listing tabs.
+- Added option to clear state in listings.
+- Enabled double quotes in css_custom_override.
+- Added new interface to enter parking charge.
+
+v3.3.38
+- Added option to create custom dropdown menus in additional charges tab.
+- Few bug fixes in quotation function.
+- Fixed problem with sending booking details to admin.
+- Fixed price deposit.
+- Vehicle can only be assigned to driver role.
+- Improved style of page amount dropdown menu switcher.
+
+v3.3.37
+- Improved booking listing subpages switch.
+- Added waiting time charge option.
+
+v3.3.36
+- Added icon and colour picker option to location category tab.
+- Do not allow to change account role to driver if there is only one admin in the system.
+- Simplified user interface in driver and admin panels.
+
+v3.3.35
+- Manual quote layout improvements.
+- Added shortcut status links for booking listing in admin.
+- Updated image gallery for vehicle type.
+- Simplified names for vehicle type and payment gallery images.
+- Set payment charge to zero for all payment methods.
+- Improved filter search in booking listing tab.
+
+v3.3.34
+- Added vehicle and payment image upload option.
+- Added new option to operating area tab.
+
+v3.3.33
+- Fixed bug in mPDF library for PHP7 in "mpdf.php" and "classes/cssmgr.php" files (look for "ETO FIX" comment).
+- Updated icon info icon in config tab.
+- Improved auto refresh booking listing option.
+- Fixed problem with displaying invoice iframe in Firefox.
+- Improved help info in payment method tab.
+- Added "BACS" payment method.
+- Added night and holiday charge factor type in config tab.
+- Fixed problem with doubled email and password id in Google Chrome.
+- Moved map under "book now" button.
+- Loaded Google Robot font in "booking.css" file.
+- Disabled driver journey form quote when fixed price is detected.
+- Fixed problem with single quote encoding which caused loading redirection loop.
+
+v3.3.32
+- Added help info to Textlocal integration tab in config.
+- Updated powered by footer.
+- Added payment method and payment status filters in booking tab in admin.
+- Added show traffic and labels option in map tab.
+
+v3.3.31
+- Disabled geocode check by lat and lng in quote file.
+- If the page is loading for too long, user will see a warning message.
+- Added duplicate booking option in admin.
+
+v3.3.30
+- Added Tax option help info in config tab.
+- Added Payzone payment option.
+
+v3.3.29
+- Few bug fixes.
+
+v3.3.28
+- Displayed all statuses in booking filter status dropdown menu.
+- Added new "formatDateTime" site helper function.
+- Updated date and time format across the app.
+- Improved navigate link in driver account.
+- Hide job status in driver account when job is in progress.
+- Added more date formats in config tab.
+- Hide Booking ID in job listing in driver tab.
+- Added Unique ID to driver name function.
+- Added start of the week option in config tab.
+- Improved calendar in admin.
+- Improved date range time picker start of the week and format options.
+- Adde Show "Unique ID" next to driver name option in config tab.
+- Moved "Unique ID" option in user edit tab to first tab.
+- Added few options in config tab to control what driver can see in his account.
+- Moved job status to the bottom of the list in driver job detail page.
+- Hide driver income for "onroute" and "onboard" statuses so that customer can not see how much driver earns.
+
+v3.3.27
+- Updated license verification module.
+- Updated site config function.
+- Updated vendor libraries.
+- Changed core classes eg. SiteProfile, Site middleware.
+- Added option to override config based on language.
+- Updated config database table.
+- Improved group invoice template.
+
+v3.3.26
+- Improved config tab option look.
+- Updated vendor libraries.
+
+v3.3.25
+- Added invoice colour options in admin.
+- Updated config links in sidebar in admin.
+
+v3.3.24
+- Improved status buttons in driver account.
+- Fixed bug with language switcher in admin.
+- Moved "Show total price in driver account" option to users tab in config.
+- Added license and mobile app pages to driver and admin accounts.
+- Removed restart button in driver account.
+- Updated translations.
+- Updated navigate to drop off link in driver account.
+- Added new section "Colours" in admin configuration tab.
+- Renamed admin option "Company Availability" to "Restricted Areas".
+- Added license verification option.
+
+v3.3.23
+- Improved milage option in config.
+- Renamed "Milage & Time" option to "Distance & Time Pricing" in config.
+- Added auto refresh listing option in bookings.
+- Improved buttons in booking listing page.
+- Added clearState option in booking listing page.
+
+v3.3.22
+- Added 3D Security option for Stripe.
+- Corrected airport charge detection in quote function.
+- Renamed translation "commission" to "income".
+- Hide driver commission percent in driver account.
+- Added new option "Notes" in booking edit tab.
+
+v3.3.21
+- Updated Google AdWords conversion script.
+
+v3.3.20
+- Added code_body and code_head options in config tab.
+- Renamed option "driver_show_total_price" to "driver_show_total".
+- Added mail settings to config tab.
+- Added language, timezone, date format, time format options in config tab.
+- Disabled autocomplete option in config tab.
+- Updated language translations.
+- Added cash and commission help icon.
+- Added already paid message when cash is set to zero.
+- Removed restriction on displaying customer details in driver job detail page.
+- Added tax section in config tab.
+- Moved operating areas and company availability options to setting menu.
+- Added navigation map link in driver job detail tab.
+- Improved driver assignment option in booking edit tab.
+
+v3.3.19
+- Added payment fee to total price.
+- Improved price formatting.
+- Improved code transactions and booking listing.
+- Added company number, company tax number, invoice options in config tab.
+- Updated invoice layout.
+- General code improvements.
+
+v3.3.18
+- Displayed commission and cash to take values in booking details popup.
+- Updated translations in admin/bookings file.
+- Improved booking reports in admin.
+- Changed tab name from "Excluded Routes" to "Company Availability".
+- Improved booking, user and vehicle tab layout in admin.
+- Improved booking filter options.
+- Updated translations.
+- Moved booking listing titles to translation files.
+
+v3.3.17
+- Milage distance can be set as float value.
+- Discounts now accept any type of letters.
+- Added configuration for TextLocal and PCA Predict services in admin config tab.
+- Added 'default-logo.png' file to 'uploads' folder.
+- Company telephone number is no longer required field.
+- Fixed double booking page load in admin.
+- Moved currency options to config file.
+- Removed driver status, driver name, veh_reg_number options from bookings.
+- Added commission and notes columns to booking table.
+- Improved code across the system.
+- Added new input type "password" in payment tab.
+- Remove untranslated language files.
+- Added text cut for header text in driver and admin panel so it looks better on mobile devices.
+- Changed translation "Baby seats" to "Booster seat".
+- Added operating areas option in config tab.
+- Added Google Analytics Tracking ID option in config tab in admin.
+- Added display type in vehicle tab in admin.
+- Added display type in payment tab in admin.
+- Displayed vehicle type in driver job details tab.
+- Added "Show total price in driver account" option in config tab.
+- Added driver commission option in booking tab.
+- Send driver notification when customer cancel booking.
+- Change "baby seats" order in frontend and backend.
+- Added "max-height" in booking listing to avoid double scrolling.
+- Added payment type "None" to migration v3.3.
+
+v3.3.16
+- Added cache timespan for admin.css, driver.css and override.css files.
+- Removed ETO config 'last_updated' option.
+- Removed ETO config 'googleMapsEmbedApiKey' option.
+
+v3.3.15
+- Updated map view in admin.
+- Updated option description in config tab.
+- Added new option 'Google Maps JavaScript API key' in config tab.
+- Updated config options across the app.
+- Added app download links in driver and admin account.
+
+v3.3.14
+- Removed double encoding urlencode()
+- License update.
+- Improved map in admin.
+- Mobile API improvements.
+- Added google_language option to config tab in admin.
+- Updated vendors libraries.
+
+v3.3.13
+- Added push_token column in users table.
+- Fixed iframe redirect problem in booking and customer view.
+- Submit booking data is send as json to avoid max vars limit in php.
+
+v3.3.12
+- Added Google geocode hack "Heathrow Terminal 5, TW6 2GA" to quote.
+- Fixed bag with via option in widgetLayout() in booking.js.
+- Improved iframe redirection.
+- Software rebranding.
+- Added site middleware class.
+- Changed all jQuery() to $() in booking.js.
+- Removed Base64 encoding from booking url params.
+- Improved "Add Via" option visibility in booking edit tab in admin.
+- Added help message to fixed prices add/edit tab.
+- Added geolocation columns in users table.
+- Added mobile app support
+
+v3.3.11
+- Added force_https config option.
+
+v3.3.10
+- Fixed but with URL in inline editing in transactions tab.
+
+v3.3.9
+- Added "None" payment status in booking listing in admin tab for bookings with no transactions.
+- Address is not longer required field in config tab.
+- Added nofollow noindex metatag in layout view.
+
+v3.3.8
+- Added min price type option in config tab.
+
+v3.3.7
+- Bug fixes in quote functions.
+- Improved calendar menu in driver tab.
+- Translated driver index page.
+- Improved help info for Holiday surcharge in config tab.
+
+v3.3.6
+- Display total price, discount and payments in customer account, email and admin listing.
+
+v3.3.5
+- Barclays payment fix.
+- Fixed bug with missing date variable in quote.
+- Added event status in drivers calendar.
+- Fixed bugs in driver's calendar.
+
+v3.3.4
+- Changed ETO logo to "Company logo" image.
+- Reduced sidebar width by 30px.
+- Added journey type icon in booking listing "A - One-way" and "B - Return".
+- Moved deposit option to new section in config tab.
+- Added new section in config tab called "Google settings".
+- Added new menu "Pricing" in admin.
+- Corrected availability calendar.
+- Added help info to excluded routes tab.
+
+v3.3.3
+- Added "Incomplete" booking status which is used for online payments.
+- Corrected summary report.
+- Improved login box.
+
+v3.3.2
+- Added translations for transactions tab in admin.
+- Added transactions inline editing in admin.
+- Changed payment status order in booking listing tab.
+- Display transactions in popup in booking listing tab.
+- Added option to manage transactions in booking edit tab.
+- Added help instructions for "Enable booking request time" option in config tab.
+- Renamed "Total" to "Total After Discount" in booking listing tab.
+- Changed commission to be calculated by "total" instead of "total with discount" in driver panel.
+- Added edit icon in payment status in booking listing tab.
+- Disable "None" payment option in booking edit tab.
+- Displayed "Payment Types" in one line in booking edit tab.
+- Changed title "Mileage/distance factors" to "Mileage & Time Prices" in config tab.
+
+v3.3.1
+- Save listing state to local storage.
+- Added company logo to invoice.
+- Added help icon to Ref number field in config tab in admin.
+- Disabled all inactive payment options in booking edit tab in admin.
+- Disabled min price type option in config tab in admin.
+- Disabled payment_page and image options in payment method tab in admin.
+- Improved look of request time option in config tab in admin.
+- Updated vendor libraries.
+- Added payment status in booking listing in admin.
+- Improved total amount in booking listing in admin.
+- Added bottom info language to booking.js in frontend.
+
+v3.3.0
+- Added service functionality.
+- Added fallback app local variable in .env config file.
+- Added 3 new languages.
+- Some code fixes.
+- Removed "strong" tag from auth views.
+- Changed Google autocomplete country code in booking.js in admin.
+- Added enquiry button, services and driver options in vehicle tab in admin.
+- Improved location search in booking.
+- Added image preview in payments and vehicle types.
+- Added addons in booking.
+- Added services and driver availability functionality.
+- Added driver base option.
+- Added time in traffic option.
+- Added transactions.
+- Improved admin booking form.
+- Changed DB encoding from "utf8_general_ci" to "utf8_unicode_ci" for all tables.
+
+v3.2.13
+- Added language switcher in driver panel.
+
+v3.2.12
+- Added total price round option.
+
+v3.2.11
+- Bug fixes.
+- Improved config tab performance.
+- Adding new js plugin "jquery-serialize-object".
+- Adding booking_allow_one_type_of_child_seat option.
+
+v3.2.10
+- Updated Stripe library.
+
+v3.2.9
+- Fixed SMTP Mail delivery problem.
+
+v3.2.8
+- Renamed Readme file to Change log.
+- Added Postcode Anywhere integration.
+- Added loading icon in location search field.
+
+v3.2.7
+- Added branding option.
+- Fixed send SMS in calendar tab in admin.
+- Fixed problem with factor_type dropdown menu in fixed prices tab.
+- Fixed SSL problem when load balancer is on.
+
+v3.2.6
+- updated start of the week in calendar in admin booking edit.
+- added language switcher in customer account.
+
+v3.2.5
+- added .env.example file.
+- removed eto debug variable.
+- added language switcher.
+- added flag icons for language switcher.
+- some language edits in frontend.
+- all emails have been moved to language.
+- added welcome email in customer account.
+- added onroute and completed emails in driver account.
+- improved getTel and getEmail functions in models.
+
+v3.2.4
+- Improved map and journey details look in booking.
+
+v3.2.3
+- moving register and login page text to language.
+- adding description column to profiles table.
+- moving users, vehicles text to language.
+- removing account view from admin panel.
+- added new column "description" to vehicles table.
+- moved auth text to language.
+- added SMS messaging option in booking via textlocal.com.
+- added driver commission column in jobs.
+- added category icon in location suggestion list in booking.
+- improved profile dropdown menu look.
+
+v3.2.2
+- Fixed export and summary options in bookings.
+- moved invoice template to a file.
+- added few languages files, vehicles, emails, invoices.
+- added "tmp" folder for invoices generation and remote connection cookie file.
+- adding new booking status "confirmed".
+- changing "New" booking status to "Waiting".
+
+v3.2.1
+- improved payment layout in 3rd step of booking.
+- some language text has been changed.
+- connected pdf, excel, stripe and redsys libraries
+
+v3.2
+- adding admin user language file
+- creating new datatables method for all controllers
+- adding company profile for customers and drivers
+- Some improvements to driver and admin layout
+- users.index template text has been transferred to language file
+- Customer account, improved look, changed icons, added company account profile type
+- Fixed Stripe payment
+- Added new columns in user_customer and profiles tables
+
+v3.1.2
+- enable "wait x minutes after landing" option by default
+- transfer driver account section text to language
+- booking.js remove vehicle select onclick function when disable button setting is on.
+
+v3.1.1
+- Admin can set payment price to zero
+- admin, user management, list, edit, add, search, driver list (all options),view, sorting problem, driver file upload
+- diver availability in listing and show
+- register
+- disable driver table
+- check user and profile connections
+- display errors if expiry
+- remove old driver tab and code
+- mot expire in listing and show
+- vehicles images move it to types of vehicles 'vehicles'
+- vehicle, list, view, edit, add, search, assign driver, upload image?
+- show dates in red
+- hide all link in users menu
+- Available -> Coming back, do not require
+- show profile data for users in listing
+- added activate user and vehicle links shortcuts
+- remove loading icon
+- Change "State" to "County" in user tab
+- Make profile phone numbers clickable
+- Option to set primary vehicle for driver
+- hide re-assign link and function in driver job tab
+- show directions on map in driver job tab
+- profile form, hide driver tab for admin and customer
+- keep main menu item open, save state in cookies
+- Notification - when driver information are not up to date - “exclamation mark” next to Driver tab, then again by driver.
+- moved js frontend language to php, moment js language has been moved to plugin folder
+- removing jQuery ui tooltip plugin from js file
+- make warning icon thiner and set to gray
+
+v3.1
+- Added company account option ??? Limit payment option
+- Added new columns in booking list in user account?
+- Added format date option
+
+v3.0
+- Added account discount
+- Added infant seat option
+- Corrected price displaying in discount message
+- Added driver details email
+- Added account benefits in booking and customer account.
+- Added min price type, before and after quote
+- Added new REF number generators
+- New php framework and backend template
+
+v2.6.13
+- add Gatwick North hack to geocode function
+
+v2.6.12
+- added "booking_account_autocompletion" option in config and booking.js.
+- changed date to "d/m/Y H:i" && "%d %B %Y" -> "%d/%m/%Y" format in frontend.php and backend.php
+- Group invoice, backend.php, added group invoice tmpl, total price in booking list, added send and download option to List.js.
+- added group invoice tmpl- correct pdf function
+- total price in booking list in backend.php,
+- added send and download option to List.js.
+
+v2.6.11
+- Added 'wheelchair' column in vehicle, booking_route and charges tables,
+  backend.php and frontend.php, php language, js language, vehicle and config tab in admin,
+  added icon, css frontend and backend, booking.js, customer.js, backend.js, frontend and backend css class etoVehicleDetails7, booking details email.
+
+v2.6.10
+- Added more options in customer booking list.
+
+v2.6.9
+- Added pay with an account payment option
+
+v2.6.8
+- added booking_include_aiport_charges option in quote, $quoteHelper->chargesBaseExclude += $total
+
+v2.6.7
+- added time icon to time field.
+- added stripe payment
+- added vehicle update in copy profile function + added enable advance variable
+- Booking payment redirection button has been changed.
+
+v2.6.6
+- Added manual quote mail template in config tab.
+
+v2.6.5
+- Update to date and time picker.
+
+v2.6.4
+- Improved geolocation by adding place id, JS and PHP update.
+- Added place function
+- Updated date and time picker
+- Date & Time picker style switcher in configuration tab
+- Updated bootstrap-datetimepicker.min.js lib
+
+v2.6.3
+- Added geocode country restriction.
+
+v2.6.2
+- Added new Worldpay payment method and uploaded payment icon.
+
+v2.6.1
+- Moved all settings to config.php file.
+- Added new config option "booking_map_open" & "booking_meet_and_greet_enable".
+- Added "google_region_code" config and edited frontend.php and backend.php files.
+- Updated booking and manager views (Google maps key and language).
+- Added new config option $etoConfig->googleMapsEmbedApiKey = '';
+- Hide full address for airport locations.
+
+v2.6
+- All previous features.
